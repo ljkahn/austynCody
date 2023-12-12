@@ -1,0 +1,12 @@
+:root {
+  --background: rgb(20, 20, 20);
+  --text: white;
+
+}
+
+.root {
+  min-height: 100vh;
+  color: var(--text);
+  background-color: var(--background);
+  ;
+}
