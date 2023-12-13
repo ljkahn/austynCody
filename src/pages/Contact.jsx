@@ -25,10 +25,10 @@ function Contact() {
     // Use the appropriate EmailJS template, service, and user ID
     emailjs
       .sendForm(
-        "portfolio1",
-        "portfolio_template",
+        "service_rl9e4x9",
+        "template_974g5lq",
         formRef.current, // Use the ref here
-        "RiL3vMh_6MN734yqq"
+        "o0rmbvpLvdPPViphx"
       )
       .then(
         (result) => {
@@ -50,13 +50,22 @@ function Contact() {
 
   return (
     <div>
-      <h1>Contact</h1>
+      <h3 className="text-center">
+        Please send me the following information in your inquiry
+      </h3>
+      <div className="text-center">
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+      </div>
       {isEmailSent && (
         <div className="alert alert-success" role="alert">
           Email sent successfully!
         </div>
       )}
-      <form ref={formRef} onSubmit={handleSubmit}>
+      <form className="text-center" ref={formRef} onSubmit={handleSubmit}>
         <label>Email:</label>
         <input
           type="email"

@@ -1,7 +1,9 @@
-import React from "react";
+import { React, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import Bio from "../pages/Bio";
+
 import backSnake from "../assets/images/backSnake.jpg";
 import fan from "../assets/images/fan.jpg";
 import spider from "../assets/images/spider.jpg";
@@ -25,21 +27,54 @@ import hannyaHalf from "../assets/images/hannyaHalf.png";
 import hannyaPaint from "../assets/images/hannyaPaint.png";
 import lotus from "../assets/images/lotus.png";
 import mum from "../assets/images/mum.png";
-
 import mumSleevePng from "../assets/images/mumSleeve.png";
 import rose from "../assets/images/rose.png";
-
 import roseHand from "../assets/images/roseHand.png";
-
 import snakePng from "../assets/images/snake.png";
-
 import snakePaint from "../assets/images/snakePaint.png";
 import tiger from "../assets/images/tiger.png";
 
 function Work() {
+  useEffect(() => {
+    const backToTopButton = document.getElementById("back-to-top");
+
+    // Show or hide the back-to-top button based on scroll position
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    // Smooth scrolling to the top when the button is clicked
+    const handleBackToTopClick = (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    // Attach event listeners
+    window.addEventListener("scroll", handleScroll);
+    backToTopButton.addEventListener("click", handleBackToTopClick);
+
+    // Clean up event listeners on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      backToTopButton.removeEventListener("click", handleBackToTopClick);
+    };
+  }, []); // Empty dependency array to run the effect only once
   return (
     <>
       <div className="work main-container">
+        <Row>
+          <Col md={6}>
+            {/* Include the Bio component here */}
+            <Bio />
+          </Col>
+        </Row>
         <Row className="text-align-center">
           <Col md={6}>
             <Card
@@ -362,6 +397,10 @@ function Work() {
             </Card>
           </Col>
         </Row>
+
+        <a href="#top" id="back-to-top" title="Back to Top">
+          &uarr;
+        </a>
       </div>
     </>
   );

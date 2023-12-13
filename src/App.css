@@ -11,8 +11,34 @@
   ;
 }
 
+/* HEADER */
+img.personal {
+  height: 5rem;
+  margin-left: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+/* BIO */
+.bio-container {
+  background-color: rgb(20, 20, 20);
+  padding: 15px;
+  color: white;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  width: 245px;
+  /* Adjust the width according to your preference */
+  overflow-y: auto;
+  /* Add scroll if the content exceeds the height */
+}
+
 /* WORK */
 
+.work {
+  display: flex;
+  justify-content: flex-start;
+}
 .work-card {
   background-color: var(--background);
   width: 29rem;
@@ -31,7 +57,10 @@ img.work {
   border-radius: 4%;
 
 }
-
+.work.main-container {
+  margin-left: 260px;
+  /* Adjust the margin to give space for the Bio component */
+}
 .main-container {
   display: flex;
   flex-direction: column;
@@ -39,11 +68,7 @@ img.work {
   background-color: var(--background);
 }
 
-.portfolio:hover {
-  color: #111;
-  background: greenyellow;
-  box-shadow: 0 0 10px rgb(201, 198, 195);
-}
+
 
 
 
@@ -87,21 +112,15 @@ img.work {
   color: #FFF;
 }
 
-.LinkedIn {
-  background-color: var(--background);
-  color: #FFF;
-}
-
-.Github {
-  background-color: var(--background);
-  color: #FFF;
-}
-
 .Message {
   background-color: var(--background);
   color: #FFF;
 }
 
+.Cart {
+  background-color: var(--background);
+  color: #FFF;
+}
 .sticky-icon a i {
   background-color: #FFF;
   height: 40px;
@@ -120,21 +139,15 @@ img.work {
   color: #1a1a1a;
 }
 
-.sticky-icon a i.fa-linkedin {
-  background-color: #FFF;
-  color: #1a1a1a;
-}
-
-.sticky-icon a i.fa-github {
-  background-color: #FFF;
-  color: #1a1a1a;
-}
-
 .sticky-icon a i.fa-message {
   background-color: #FFF;
   color: #1a1a1a;
 }
 
+.sticky-icon a i.fa-cart {
+  background-color: #FFF;
+  color: #1a1a1a;
+}
 
 .fas fa-shopping-cart {
   background-color: #FFF;
@@ -167,6 +180,57 @@ img.work {
   background-color: #555;
 }
 
+
+
+/* CONTACT */
+.list {
+  text-decoration: dotted;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* Adjust the gap to your preference */
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  width: 50rem;
+  
+}
+
+textarea {
+  width: 50rem;
+  height: 13rem;
+}
+
+/* BACK TO TOP ARROW */
+
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2b2e30;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+#back-to-top:hover {
+  background-color: #696d72;
+}
 
 /* MEDIA QUERIES */
 
