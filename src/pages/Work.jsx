@@ -36,10 +36,9 @@ import tiger from "../assets/images/tiger.png";
 
 function Work() {
   useEffect(() => {
-    const backToTopButton = document.getElementById("back-to-top");
-
-    // Show or hide the back-to-top button based on scroll position
     const handleScroll = () => {
+      const backToTopButton = document.getElementById("back-to-top");
+
       if (window.scrollY > 300) {
         backToTopButton.style.display = "block";
       } else {
@@ -47,23 +46,12 @@ function Work() {
       }
     };
 
-    // Smooth scrolling to the top when the button is clicked
-    const handleBackToTopClick = (e) => {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    };
-
-    // Attach event listeners
+    // Show or hide the back-to-top button based on scroll position
     window.addEventListener("scroll", handleScroll);
-    backToTopButton.addEventListener("click", handleBackToTopClick);
 
-    // Clean up event listeners on component unmount
+    // Clean up event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      backToTopButton.removeEventListener("click", handleBackToTopClick);
     };
   }, []); // Empty dependency array to run the effect only once
   return (
@@ -398,7 +386,7 @@ function Work() {
           </Col>
         </Row>
 
-        <a href="#top" id="back-to-top" title="Back to Top">
+        <a href="#back-to-top" id="back-to-top" title="Back to Top">
           &uarr;
         </a>
       </div>

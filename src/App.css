@@ -11,9 +11,8 @@
   height: 100vh;
   max-width: 100%;
     margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      /* Prevent horizontal scrolling */
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* HEADER */
@@ -219,7 +218,7 @@ textarea {
 
 
 #back-to-top {
-  display: none;
+
   position: fixed;
   bottom: 20px;
   right: 20px;
