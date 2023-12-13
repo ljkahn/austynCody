@@ -8,7 +8,7 @@
   min-height: 100vh;
   color: var(--text);
   background-color: var(--background);
-  ;
+  width: 100%;
 }
 
 /* HEADER */
