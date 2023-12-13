@@ -22,7 +22,7 @@ img.personal {
 /* BIO */
 .bio-container {
   background-color: rgb(20, 20, 20);
-  padding: 15px;
+  /* padding: 15px; */
   color: white;
   position: fixed;
   top: 30%;
@@ -233,18 +233,46 @@ textarea {
 }
 
 /* MEDIA QUERIES */
-
 @media screen and (max-width: 1688px) {
-
+  /* .about {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    font-size: x-small;
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+    text-align: center;
+  } */
 
   .work {
     align-items: center;
   }
 
   .card {
+    /* margin: 1rem; */
+    width: 15rem;
+  }
+
+  img.work {
+    width: 13rem;
+    height: 15rem;
     margin: 1rem;
-    width: 22rem;
+    border-radius: 4%;
+  }
+
+  img.personal {
+    height: 2.5rem;
+    width: 4.5rem;
+    /* margin-left: 1rem; */
 
   }
 
+  .sticky-icon {
+    z-index: 1;
+    position: fixed;
+    top: 60%;
+    right: 0%;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+  }
 }
