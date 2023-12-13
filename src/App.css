@@ -292,6 +292,7 @@ textarea {
   
      input,
      textarea {
+      background-color: var(--background);
        width: 85%;
 
        max-width: 50rem;
