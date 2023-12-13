@@ -75,8 +75,8 @@ function Work() {
             <Bio />
           </Col>
         </Row>
-        <div className="row">
-          <div className="col-md-6">
+        <Row className="text-align-center">
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
@@ -87,18 +87,18 @@ function Work() {
                 className="work portfolio"
               />
             </Card>
-          </div>
-          <div className="col-md-6">
+          </Col>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
             >
               <Card.Img variant="top" src={fan} className="work portfolio" />
             </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
@@ -109,78 +109,8 @@ function Work() {
                 className="work portfolio"
               />
             </Card>
-          </div>
-          <div className="col-md-6">
-            <Card
-              className="work-card"
-              style={{ backgroundColor: "rgb(20, 20, 20)" }}
-            >
-              <Card.Img variant="top" src={hannya} className="work portfolio" />
-            </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
-            <Card
-              className="work-card"
-              style={{ backgroundColor: "rgb(20, 20, 20)" }}
-            >
-              <Card.Img
-                variant="top"
-                src={mumSleeve}
-                className="work portfolio"
-              />
-            </Card>
-          </div>
-          <div className="col-md-6">
-            <Card
-              className="work-card"
-              style={{ backgroundColor: "rgb(20, 20, 20)" }}
-            >
-              <Card.Img
-                variant="top"
-                src={mumSleeve2}
-                className="work portfolio"
-              />
-            </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
-            <Card
-              className="work-card"
-              style={{ backgroundColor: "rgb(20, 20, 20)" }}
-            >
-              <Card.Img variant="top" src={snake} className="work portfolio" />
-            </Card>
-          </div>
-          <div className="col-md-6">
-            <Card
-              className="work-card"
-              style={{ backgroundColor: "rgb(20, 20, 20)" }}
-            >
-              <Card.Img
-                variant="top"
-                src={snakeCard}
-                className="work portfolio"
-              />
-            </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
-            <Card
-              className="work-card"
-              style={{ backgroundColor: "rgb(20, 20, 20)" }}
-            >
-              <Card.Img
-                variant="top"
-                src={snakeMum}
-                className="work portfolio"
-              />
-            </Card>
-          </div>
-          <div className="col-md-6">
+          </Col>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
@@ -191,64 +121,134 @@ function Work() {
                 className="work portfolio"
               />
             </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Card
+              className="work-card"
+              style={{ backgroundColor: "rgb(20, 20, 20)" }}
+            >
+              <Card.Img
+                variant="top"
+                src={mumSleeve}
+                className="work portfolio"
+              />
+            </Card>
+          </Col>
+          <Col md={6}>
+            <Card
+              className="work-card"
+              style={{ backgroundColor: "rgb(20, 20, 20)" }}
+            >
+              <Card.Img
+                variant="top"
+                src={mumSleeve2}
+                className="work portfolio"
+              />
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Card
+              className="work-card"
+              style={{ backgroundColor: "rgb(20, 20, 20)" }}
+            >
+              <Card.Img variant="top" src={snake} className="work portfolio" />
+            </Card>
+          </Col>
+          <Col md={6}>
+            <Card
+              className="work-card"
+              style={{ backgroundColor: "rgb(20, 20, 20)" }}
+            >
+              <Card.Img
+                variant="top"
+                src={snakeCard}
+                className="work portfolio"
+              />
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Card
+              className="work-card"
+              style={{ backgroundColor: "rgb(20, 20, 20)" }}
+            >
+              <Card.Img
+                variant="top"
+                src={snakeMum}
+                className="work portfolio"
+              />
+            </Card>
+          </Col>
+          <Col md={6}>
+            <Card
+              className="work-card"
+              style={{ backgroundColor: "rgb(20, 20, 20)" }}
+            >
+              <Card.Img variant="top" src={hannya} className="work portfolio" />
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
             >
               <Card.Img variant="top" src={spider} className="work portfolio" />
             </Card>
-          </div>
-          <div className="col-md-6">
+          </Col>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
             >
               <Card.Img variant="top" src={bison} className="work portfolio" />
             </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
             >
               <Card.Img variant="top" src={crane} className="work portfolio" />
             </Card>
-          </div>
-          <div className="col-md-6">
+          </Col>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
             >
               <Card.Img variant="top" src={dragon} className="work portfolio" />
             </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
             >
               <Card.Img variant="top" src={face} className="work portfolio" />
             </Card>
-          </div>
-          <div className="col-md-6">
+          </Col>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
             >
               <Card.Img variant="top" src={fooDog} className="work portfolio" />
             </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
@@ -259,8 +259,8 @@ function Work() {
                 className="work portfolio"
               />
             </Card>
-          </div>
-          <div className="col-md-6">
+          </Col>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
@@ -271,18 +271,18 @@ function Work() {
                 className="work portfolio"
               />
             </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
             >
               <Card.Img variant="top" src={Hannya} className="work portfolio" />
             </Card>
-          </div>
-          <div className="col-md-6">
+          </Col>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
@@ -293,10 +293,10 @@ function Work() {
                 className="work portfolio"
               />
             </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
@@ -307,26 +307,26 @@ function Work() {
                 className="work portfolio"
               />
             </Card>
-          </div>
-          <div className="col-md-6">
+          </Col>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
             >
               <Card.Img variant="top" src={lotus} className="work portfolio" />
             </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
             >
               <Card.Img variant="top" src={mum} className="work portfolio" />
             </Card>
-          </div>
-          <div className="col-md-6">
+          </Col>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
@@ -337,18 +337,18 @@ function Work() {
                 className="work portfolio"
               />
             </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
             >
               <Card.Img variant="top" src={rose} className="work portfolio" />
             </Card>
-          </div>
-          <div className="col-md-6">
+          </Col>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
@@ -359,22 +359,10 @@ function Work() {
                 className="work portfolio"
               />
             </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
-            <Card
-              className="work-card"
-              style={{ backgroundColor: "rgb(20, 20, 20)" }}
-            >
-              <Card.Img
-                variant="top"
-                src={snakePaint}
-                className="work portfolio"
-              />
-            </Card>
-          </div>
-          <div className="col-md-6">
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
@@ -385,18 +373,30 @@ function Work() {
                 className="work portfolio"
               />
             </Card>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
+          </Col>
+          <Col md={6}>
+            <Card
+              className="work-card"
+              style={{ backgroundColor: "rgb(20, 20, 20)" }}
+            >
+              <Card.Img
+                variant="top"
+                src={snakePaint}
+                className="work portfolio"
+              />
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
             >
               <Card.Img variant="top" src={tiger} className="work portfolio" />
             </Card>
-          </div>
-        </div>
+          </Col>
+        </Row>
 
         <a href="#top" id="back-to-top" title="Back to Top">
           &uarr;
