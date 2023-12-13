@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
@@ -35,14 +35,18 @@ import snakePaint from "../assets/images/snakePaint.png";
 import tiger from "../assets/images/tiger.png";
 
 function Work() {
-  useEffect(() => {
-    const handleScroll = () => {
-      const backToTopButton = document.getElementById("back-to-top");
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
-      if (window.scrollY > 300) {
-        backToTopButton.style.display = "block";
+  useEffect(() => {
+    console.log("Effect is running...");
+    const handleScroll = () => {
+      console.log("scrolling...");
+      if (window.scrollY > 100) {
+        console.log("Setting showBackToTop to true");
+        setShowBackToTop(true);
       } else {
-        backToTopButton.style.display = "none";
+        console.log("Setting showBackToTop to false");
+        setShowBackToTop(false);
       }
     };
 
@@ -54,6 +58,7 @@ function Work() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []); // Empty dependency array to run the effect only once
+
   return (
     <>
       <div className="work main-container">
@@ -385,10 +390,16 @@ function Work() {
             </Card>
           </Col>
         </Row>
-
-        <a href="#back-to-top" id="back-to-top" title="Back to Top">
-          &uarr;
-        </a>
+        {showBackToTop ? (
+          <a
+            href="#back-to-top"
+            id="back-to-top"
+            title="Back to Top"
+            className="show"
+          >
+            &uarr;
+          </a>
+        ) : null}
       </div>
     </>
   );

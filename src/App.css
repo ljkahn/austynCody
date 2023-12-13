@@ -12,7 +12,7 @@
   max-width: 100%;
     margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  /* overflow-x: hidden;  */
 }
 
 /* HEADER */
@@ -215,23 +215,24 @@ textarea {
 }
 
 /* BACK TO TOP ARROW */
-
-
 #back-to-top {
-
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #2b2e30;
-  color: #ffffff;
+  font-size: 24px;
+  color: white;
+  /* background-color: #333; */
   padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 25px;
+  border-radius: 50%;
+  display: none;
+  /* Hide initially */
   cursor: pointer;
-  transition: opacity 0.3s, visibility 0.3s;
 }
 
+#back-to-top.show {
+  display: block;
+  /* Show the button when it has the "show" class */
+}
 #back-to-top:hover {
   background-color: #696d72;
 }
