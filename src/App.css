@@ -9,6 +9,7 @@
   color: var(--text);
   background-color: var(--background);
   height: 100vh;
+  max-width: 100%;
 }
 
 /* HEADER */
@@ -285,14 +286,14 @@ textarea {
        align-items: center;
      }
   
-     .label {
+     label {
        text-align: center;
      }
   
-     .input,
-     .textarea {
-       width: 90%;
-       /* Use full width for smaller screens */
+     input,
+     textarea {
+       width: 85%;
+
        max-width: 50rem;
        /* Set a maximum width if needed */
      }
