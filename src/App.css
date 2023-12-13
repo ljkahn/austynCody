@@ -20,7 +20,7 @@ img.personal {
   height: 5rem;
   margin-left: 3rem;
   margin-top: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 /* BIO */
@@ -32,6 +32,8 @@ img.personal {
    top: 30%;
   left: 0;
   width: 245px;
+  text-align: center;
+  font-size: smaller;
 
    overflow-y: auto; 
 
@@ -184,7 +186,19 @@ img.work {
   background-color: #555;
 }
 
+/* Styles specific to the contact page */
+.contact-page .sticky-icons {
+  top: 60%;
+  /* Adjust the position for the contact page */
+  right: 0%;
+}
 
+/* Styles specific to the work page */
+.work-page .sticky-icons {
+  top: 100%;
+  /* Adjust the position for the work page */
+  right: 0%;
+}
 
 /* CONTACT */
 .list {
@@ -212,6 +226,10 @@ input {
 textarea {
   width: 50rem;
   height: 13rem;
+}
+
+.btn {
+  background-color: #aaaaaa;
 }
 
 /* BACK TO TOP ARROW */

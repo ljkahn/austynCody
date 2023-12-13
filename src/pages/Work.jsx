@@ -34,6 +34,7 @@ import snakePng from "../assets/images/snake.png";
 import snakePaint from "../assets/images/snakePaint.png";
 import tiger from "../assets/images/tiger.png";
 
+const isContactPage = false;
 function Work() {
   const [showBackToTop, setShowBackToTop] = useState(false);
 

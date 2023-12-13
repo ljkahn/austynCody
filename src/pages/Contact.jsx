@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
+const isContactPage = true;
 function Contact() {
   const navigate = useNavigate();
   const formRef = useRef(); // Create a ref for the form
@@ -49,7 +50,9 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div
+      className={`sticky-icons ${isContactPage ? "contact-page" : "work-page"}`}
+    >
       <h3 className="text-center">
         Please send me the following information in your inquiry
       </h3>
@@ -81,7 +84,9 @@ function Contact() {
           onChange={handleChange}
           required
         ></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit" className="button">
+          Send Message
+        </button>
       </form>
     </div>
   );
