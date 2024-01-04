@@ -218,13 +218,17 @@ label {
   margin-bottom: 5px;
 }
 
-input {
-  width: 50rem;
+.input {
+  width: 20rem;
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+  text-align: left;
   
 }
 
 textarea {
-  width: 50rem;
+  width: 20rem;
   height: 13rem;
 }
 
@@ -245,7 +249,10 @@ textarea {
   display: none;
   /* Hide initially */
   cursor: pointer;
+
 }
+
+
 
 #back-to-top.show {
   display: block;

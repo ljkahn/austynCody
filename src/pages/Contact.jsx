@@ -1,7 +1,10 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
-
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 const isContactPage = true;
 function Contact() {
   const navigate = useNavigate();
@@ -56,28 +59,96 @@ function Contact() {
       <h3 className="text-center">
         Please send me the following information in your inquiry
       </h3>
-      <div className="text-center">
-        <p>name</p>
-        <p>name</p>
-        <p>name</p>
-        <p>name</p>
-        <p>name</p>
-      </div>
+
       {isEmailSent && (
         <div className="alert alert-success" role="alert">
           Email sent successfully!
         </div>
       )}
-      <form className="text-center" ref={formRef} onSubmit={handleSubmit}>
-        <label>Email:</label>
+      {/* <Form ref={formRef} onSubmit={handleSubmit}>
+        <Row className="mb-3">
+          <Col>
+            <label>Email:</label>
+            <input
+              className="input"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+
+            <label>Name:</label>
+            <input
+              className="input"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </Col>
+        </Row>
+
+        <Row className="mb-3">
+          <Col>
+            <label>Design Idea:</label>
+            <input
+              type="text"
+              className="input"
+              name="designIdea"
+              value={formData.designIdea}
+              onChange={handleChange}
+              required
+            />
+
+            <label>Placement:</label>
+            <input
+              className="input"
+              type="text"
+              name="placement"
+              value={formData.placement}
+              onChange={handleChange}
+              required
+            />
+          </Col>
+        </Row>
+
+        <Row className="mb-3">
+          <Col>
+            <label>Size:</label>
+            <input
+              className="input"
+              type="text"
+              name="size"
+              value={formData.size}
+              onChange={handleChange}
+              required
+            />
+
+            <label>Budget:</label>
+            <input
+              className="input"
+              type="text"
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              required
+            />
+          </Col>
+        </Row>
+
+        <label>Black and Grey/Color:</label>
         <input
-          type="email"
-          name="email"
-          value={formData.email}
+          className="input"
+          type="text"
+          name="colorPreference"
+          value={formData.colorPreference}
           onChange={handleChange}
           required
         />
-        <label>Message:</label>
+
+        <label>Any other details:</label>
         <textarea
           name="message"
           value={formData.message}
@@ -87,7 +158,54 @@ function Contact() {
         <button type="submit" className="button">
           Send Message
         </button>
-      </form>
+      </Form> */}
+
+      <Form ref={formRef} onSubmit={handleSubmit}>
+        <Row className="mb-3">
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Email</Form.Label>
+            <Form.Control type="email" name="email" placeholder="Enter email" />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Label>Name</Form.Label>
+            <Form.Control type="text" name="name" placeholder="Name" />
+          </Form.Group>
+        </Row>
+
+        <Row className="mb-3">
+          <Form.Group as={Col} controlId="formGridAddress1">
+            <Form.Label>Design Idea</Form.Label>
+            <Form.Control type="text" name="designIdea" placeholder="" />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridAddress2">
+            <Form.Label>Placement</Form.Label>
+            <Form.Control type="text" name="placement" placeholder="" />
+          </Form.Group>
+        </Row>
+
+        <Row className="mb-3">
+          <Form.Group as={Col} controlId="formGridCity">
+            <Form.Label>Size</Form.Label>
+            <Form.Control type="text" name="size" />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridZip">
+            <Form.Label>Budget</Form.Label>
+            <Form.Control type="text" name="budget" />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridZip">
+            <Form.Label>Black and Grey/Color</Form.Label>
+            <Form.Control type="text" name="colorPreference" />
+          </Form.Group>
+        </Row>
+
+        <Button className="btn" variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
     </div>
   );
 }
