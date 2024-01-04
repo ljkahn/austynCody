@@ -9,6 +9,9 @@ const StickyIcon = () => {
     navigate("/contact");
   };
 
+  const handleCartClick = () => {
+    navigate("/shop");
+  };
   return (
     <div className="sticky-icon">
       <a
@@ -23,7 +26,7 @@ const StickyIcon = () => {
       <a className="Message" onClick={handleEnvelopeClick}>
         <FaEnvelope />
       </a>
-      <a className="Cart">
+      <a className="Cart" onClick={handleCartClick}>
         <FaShoppingCart />
       </a>
     </div>

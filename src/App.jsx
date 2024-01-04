@@ -5,6 +5,7 @@ import Work from "./pages/Work";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Contact from "./pages/Contact";
+import Shop from "./pages/Shop";
 import StickyIcon from "./components/stickyIcon";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Work />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/shop" element={<Shop />} />
       </Routes>
       <Footer />
     </Router>

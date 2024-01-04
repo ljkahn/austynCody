@@ -3,9 +3,9 @@ import React from "react";
 function Bio() {
   return (
     <div className="bio-container">
-      <h2>
+      <h2 className="bio">
         Austyn Cody works out of Rainbow Demon Tattoo in Denver, CO. Fine line
-        traditional and japanese.
+        traditional, floral, traditional and japanese tattoos.
       </h2>
       <p></p>
     </div>
