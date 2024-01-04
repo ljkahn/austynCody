@@ -209,7 +209,15 @@ img.work {
 }
 
 /* FORM */
+
+.inquiry {
+  margin-top: 3rem;
+  font-size: large;
+  padding: 1rem;
+}
 form {
+
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -233,10 +241,12 @@ label {
 textarea {
   width: 20rem;
   height: 13rem;
+  background-color: #696d72;
 }
 
 .btn {
   background-color: #aaaaaa;
+  
 }
 
 /* BACK TO TOP ARROW */
@@ -310,7 +320,7 @@ textarea {
   .sticky-icon {
     z-index: 1;
     position:fixed;
-    top: 35%;
+    top: 60%;
     right: 0%;
     width: 205px;
     display: flex;

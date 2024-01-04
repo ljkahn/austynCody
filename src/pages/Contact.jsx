@@ -56,7 +56,7 @@ function Contact() {
     <div
       className={`sticky-icons ${isContactPage ? "contact-page" : "work-page"}`}
     >
-      <h3 className="text-center">
+      <h3 className="text-center inquiry">
         Please send me the following information in your inquiry
       </h3>
 
@@ -195,7 +195,8 @@ function Contact() {
             <Form.Label>Budget</Form.Label>
             <Form.Control type="text" name="budget" />
           </Form.Group>
-
+        </Row>
+        <Row>
           <Form.Group as={Col} controlId="formGridZip">
             <Form.Label>Black and Grey/Color</Form.Label>
             <Form.Control type="text" name="colorPreference" />
