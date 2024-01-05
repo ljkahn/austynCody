@@ -230,8 +230,8 @@ label {
 }
 
 .input {
-  width: 50rem;
-  height: 3rem;
+  width: 2rem;
+  height: 10rem;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -278,7 +278,7 @@ textarea {
   /* Show the button when it has the "show" class */
 }
 #back-to-top:hover {
-  background-color: #696d72;
+  background-color: #202020;
 }
 
 /* MEDIA QUERIES */
@@ -321,7 +321,7 @@ textarea {
   .sticky-icon {
     z-index: 1;
     position:fixed;
-    top: 60%;
+    top: 75%;
     right: 0%;
     width: 205px;
     display: flex;

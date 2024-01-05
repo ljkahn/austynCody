@@ -164,43 +164,79 @@ function Contact() {
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" name="email" placeholder="" />
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder=""
+              style={{ backgroundColor: "#202020" }}
+            />
           </Form.Group>
 
           <Form.Group as={Col} controlId="">
             <Form.Label>Name</Form.Label>
-            <Form.Control type="text" name="name" placeholder="" />
+            <Form.Control
+              type="text"
+              name="name"
+              placeholder=""
+              style={{ backgroundColor: "#202020" }}
+            />
           </Form.Group>
         </Row>
 
         <Row className="mb-3">
-          <Form.Group as={Col} sm={12} controlId="">
+          <Form.Group as={Col} sm={12} controlId="" className="mb-3">
             <Form.Label>Design Idea</Form.Label>
-            <Form.Control type="text" name="designIdea" placeholder="" />
+            <textarea
+              className="form-control"
+              name="designIdea"
+              placeholder=""
+              style={{
+                height: "7rem",
+                paddingTop: "1rem", // Adjust the top padding as needed
+                verticalAlign: "top", // Set vertical alignment to top
+                backgroundColor: "#202020",
+              }}
+            />
           </Form.Group>
-        </Row>
-        <Row>
+
           <Form.Group as={Col} controlId="">
             <Form.Label>Placement</Form.Label>
-            <Form.Control type="text" name="placement" placeholder="" />
+            <Form.Control
+              type="text"
+              name="placement"
+              placeholder=""
+              style={{ backgroundColor: "#202020" }}
+            />
           </Form.Group>
         </Row>
 
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridCity">
             <Form.Label>Size</Form.Label>
-            <Form.Control type="text" name="size" />
+            <Form.Control
+              type="text"
+              name="size"
+              style={{ backgroundColor: "#202020" }}
+            />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridZip">
             <Form.Label>Budget</Form.Label>
-            <Form.Control type="text" name="budget" />
+            <Form.Control
+              type="text"
+              name="budget"
+              style={{ backgroundColor: "#202020" }}
+            />
           </Form.Group>
         </Row>
         <Row>
           <Form.Group as={Col} controlId="formGridZip">
             <Form.Label>Black and Grey/Color</Form.Label>
-            <Form.Control type="text" name="colorPreference" />
+            <Form.Control
+              type="text"
+              name="colorPreference"
+              style={{ backgroundColor: "#202020" }}
+            />
           </Form.Group>
         </Row>
 
