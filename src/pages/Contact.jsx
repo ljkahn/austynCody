@@ -164,27 +164,23 @@ function Contact() {
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
-            <Form.Control
-              type="email"
-              name="email"
-              placeholder=""
-              className="input"
-            />
+            <Form.Control type="email" name="email" placeholder="" />
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formGridPassword">
+          <Form.Group as={Col} controlId="">
             <Form.Label>Name</Form.Label>
             <Form.Control type="text" name="name" placeholder="" />
           </Form.Group>
         </Row>
 
         <Row className="mb-3">
-          <Form.Group as={Col} controlId="formGridAddress1">
+          <Form.Group as={Col} sm={12} controlId="">
             <Form.Label>Design Idea</Form.Label>
             <Form.Control type="text" name="designIdea" placeholder="" />
           </Form.Group>
-
-          <Form.Group as={Col} controlId="formGridAddress2">
+        </Row>
+        <Row>
+          <Form.Group as={Col} controlId="">
             <Form.Label>Placement</Form.Label>
             <Form.Control type="text" name="placement" placeholder="" />
           </Form.Group>
@@ -208,7 +204,7 @@ function Contact() {
           </Form.Group>
         </Row>
 
-        <Button className="btn" variant="primary" type="submit">
+        <Button variant="dark" className="btn" type="submit">
           Submit
         </Button>
       </Form>

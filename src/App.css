@@ -230,7 +230,12 @@ label {
 }
 
 .input {
-background-color: #181818;
+  width: 50rem;
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  
 }
 
 textarea {
