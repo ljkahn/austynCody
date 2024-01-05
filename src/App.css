@@ -59,17 +59,16 @@ img.personal {
 img.work {
   width: 29rem;
   height: 33rem;
+border-radius: 4%;
 
-
-
-
-  border-radius: 4%;
-
-/* }
-.work.main-container {
-  margin-left: 260px;
-  /* Adjust the margin to give space for the Bio component */
 } 
+
+/* WORK MODAL */
+
+.modal {
+  background-color: #202020;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;

@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal";
 
 const ImageModal = ({ show, onHide, imageSrc }) => {
   return (
-    <Modal show={show} onHide={onHide} centered>
+    <Modal show={show} onHide={onHide} centered className="modal">
       <Modal.Body className="text-center p-0">
         <img
           src={imageSrc}
