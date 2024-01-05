@@ -15,6 +15,7 @@ const ImageModal = ({ show, onHide, imageSrc }) => {
           style={{
             maxWidth: "100%",
             maxHeight: "80vh",
+            imageRendering: "optimizeQuality",
           }}
         />
       </Modal.Body>

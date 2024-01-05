@@ -67,6 +67,7 @@ border-radius: 4%;
 
 .modal {
   background-color: #1d1d1d;
+  image-rendering:optimizeQuality;
 }
 
 .main-container {
