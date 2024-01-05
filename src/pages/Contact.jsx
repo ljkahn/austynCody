@@ -164,12 +164,17 @@ function Contact() {
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" name="email" placeholder="Enter email" />
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder=""
+              className="input"
+            />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
             <Form.Label>Name</Form.Label>
-            <Form.Control type="text" name="name" placeholder="Name" />
+            <Form.Control type="text" name="name" placeholder="" />
           </Form.Group>
         </Row>
 

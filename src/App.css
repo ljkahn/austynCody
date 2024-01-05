@@ -230,19 +230,15 @@ label {
 }
 
 .input {
-  width: 20rem;
-  height: 3rem;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  
+background-color: #181818;
 }
 
 textarea {
   width: 20rem;
   height: 13rem;
-  background-color: #696d72;
+ 
 }
+
 
 .btn {
   background-color: #aaaaaa;
