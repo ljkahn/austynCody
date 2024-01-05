@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Bio from "../pages/Bio";
+import ImageModal from "../components/imageModal";
 
 import backSnake from "../assets/images/backSnake.jpg";
 import fan from "../assets/images/fan.jpg";
@@ -37,6 +38,18 @@ import tiger from "../assets/images/tiger.png";
 const isContactPage = false;
 function Work() {
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+    setShowModal(true);
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+    setSelectedImage(null);
+  };
 
   useEffect(() => {
     console.log("Effect is running...");
@@ -74,6 +87,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(backSnake)}
             >
               <Card.Img
                 variant="top"
@@ -86,6 +100,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(fan)}
             >
               <Card.Img variant="top" src={fan} className="work portfolio" />
             </Card>
@@ -96,6 +111,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(floralSleeve)}
             >
               <Card.Img
                 variant="top"
@@ -108,6 +124,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(hannya1)}
             >
               <Card.Img
                 variant="top"
@@ -122,6 +139,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(mumSleeve)}
             >
               <Card.Img
                 variant="top"
@@ -134,6 +152,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(mumSleeve2)}
             >
               <Card.Img
                 variant="top"
@@ -148,6 +167,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(snake)}
             >
               <Card.Img variant="top" src={snake} className="work portfolio" />
             </Card>
@@ -156,6 +176,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(snakeCard)}
             >
               <Card.Img
                 variant="top"
@@ -170,6 +191,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(snakeMum)}
             >
               <Card.Img
                 variant="top"
@@ -182,6 +204,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(hannya)}
             >
               <Card.Img variant="top" src={hannya} className="work portfolio" />
             </Card>
@@ -192,6 +215,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(spider)}
             >
               <Card.Img variant="top" src={spider} className="work portfolio" />
             </Card>
@@ -200,6 +224,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(bison)}
             >
               <Card.Img variant="top" src={bison} className="work portfolio" />
             </Card>
@@ -210,6 +235,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(crane)}
             >
               <Card.Img variant="top" src={crane} className="work portfolio" />
             </Card>
@@ -218,6 +244,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(dragon)}
             >
               <Card.Img variant="top" src={dragon} className="work portfolio" />
             </Card>
@@ -228,6 +255,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(face)}
             >
               <Card.Img variant="top" src={face} className="work portfolio" />
             </Card>
@@ -236,6 +264,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(fooDog)}
             >
               <Card.Img variant="top" src={fooDog} className="work portfolio" />
             </Card>
@@ -246,6 +275,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(geoSleeve)}
             >
               <Card.Img
                 variant="top"
@@ -258,6 +288,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(geoSleeve1)}
             >
               <Card.Img
                 variant="top"
@@ -272,6 +303,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(Hannya)}
             >
               <Card.Img variant="top" src={Hannya} className="work portfolio" />
             </Card>
@@ -280,6 +312,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(hannyaHalf)}
             >
               <Card.Img
                 variant="top"
@@ -294,6 +327,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(hannyaPaint)}
             >
               <Card.Img
                 variant="top"
@@ -306,6 +340,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(lotus)}
             >
               <Card.Img variant="top" src={lotus} className="work portfolio" />
             </Card>
@@ -316,6 +351,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(mum)}
             >
               <Card.Img variant="top" src={mum} className="work portfolio" />
             </Card>
@@ -324,6 +360,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(mumSleevePng)}
             >
               <Card.Img
                 variant="top"
@@ -338,6 +375,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(rose)}
             >
               <Card.Img variant="top" src={rose} className="work portfolio" />
             </Card>
@@ -346,6 +384,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(roseHand)}
             >
               <Card.Img
                 variant="top"
@@ -360,6 +399,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(snakePng)}
             >
               <Card.Img
                 variant="top"
@@ -372,6 +412,7 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(snakePaint)}
             >
               <Card.Img
                 variant="top"
@@ -386,11 +427,18 @@ function Work() {
             <Card
               className="work-card"
               style={{ backgroundColor: "rgb(20, 20, 20)" }}
+              onClick={() => handleImageClick(tiger)}
             >
               <Card.Img variant="top" src={tiger} className="work portfolio" />
             </Card>
           </Col>
         </Row>
+        <ImageModal
+          show={showModal}
+          onHide={handleModalClose}
+          imageSrc={selectedImage}
+        />
+
         {showBackToTop ? (
           <a
             href="#back-to-top"
