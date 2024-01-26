@@ -128,7 +128,7 @@ function Work() {
           onHide={handleModalClose}
           imageSrc={selectedImage}
         />
-        {showBackToTop ? (
+        {/* {showBackToTop ? (
           <a
             href="#back-to-top"
             id="back-to-top"
@@ -137,7 +137,7 @@ function Work() {
           >
             &uarr;
           </a>
-        ) : null}
+        ) : null} */}
       </div>
     </>
   );
