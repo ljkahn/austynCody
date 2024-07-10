@@ -34,7 +34,6 @@ import spider from "../assets/images/spider.jpg";
 import tiger from "../assets/images/tiger.png";
 
 function Work() {
-  const [showBackToTop, setShowBackToTop] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -47,22 +46,6 @@ function Work() {
     setShowModal(false);
     setSelectedImage(null);
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setShowBackToTop(true);
-      } else {
-        setShowBackToTop(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const itemData = [
     { img: backSnake, title: "Snake back tattoo" },
@@ -94,50 +77,49 @@ function Work() {
     { img: tiger, title: "Coffee table" },
   ];
 
+  useEffect(() => {
+    console.log("Rendering Work component");
+  }, []);
+
   return (
     <>
       <Bio />
-      <Box
-        sx={{
-          width: "75%",
-          height: "100vh",
-          overflowY: "scroll",
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "center",
-        }}
+      <div
+        className="main-container"
+        style={{ backgroundColor: "var(--background)" }}
       >
-        <ImageList variant="masonry" cols={3} gap={8}>
-          {itemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                src={`${item.img}?w=248&fit=crop&auto=format`}
-                alt={item.title}
-                // loading="lazy"
-                onClick={() => handleImageClick(item.img)}
-                style={{ width: "100%", height: "100%" }}
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Box>
-      <div className="work main-container">
+        <Box
+          sx={{
+            width: "75%",
+            margin: "0 auto",
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          <ImageList variant="masonry" cols={3} gap={8}>
+            {itemData.map((item, index) => (
+              <ImageListItem key={index}>
+                <img
+                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  src={`${item.img}?w=248&fit=crop&auto=format`}
+                  alt={item.title}
+                  onClick={() => handleImageClick(item.img)}
+                  style={{ width: "100%", height: "100%" }}
+                  onError={(e) => {
+                    console.error("Image failed to load:", item.img);
+                    e.target.src = ""; // Provide a fallback image if needed
+                  }}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Box>
         <ImageModal
           show={showModal}
           onHide={handleModalClose}
           imageSrc={selectedImage}
         />
-        {/* {showBackToTop ? (
-          <a
-            href="#back-to-top"
-            id="back-to-top"
-            title="Back to Top"
-            className="show"
-          >
-            &uarr;
-          </a>
-        ) : null} */}
       </div>
     </>
   );
